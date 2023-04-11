@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 3.0.0"
+      version = "~> 3.7.0"
     }
     random = {
       source  = "hashicorp/random"
@@ -21,6 +21,7 @@ terraform {
 }
 provider "azurerm" {
   features {}
+  use_oidc = true
 }
 
 # Generate a random integer to create a globally unique name
