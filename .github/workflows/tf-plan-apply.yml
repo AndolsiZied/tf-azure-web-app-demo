@@ -34,8 +34,7 @@ jobs:
       - name: 'Run Azure CLI commands'
         run: |
           az account show
-          az group list
-          pwd
+          az storage container list --account-name terraformcomptestockage
   terraform-plan:
     name: 'Terraform Plan'
     runs-on: ubuntu-latest
