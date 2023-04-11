@@ -16,7 +16,7 @@ terraform {
     storage_account_name = "terraformcomptestockage"
     container_name       = "tf-states"
     key                  = "terraform.tfstate"
-    use_oidc             = true
+    #use_oidc             = true
   }
 }
 provider "azurerm" {
