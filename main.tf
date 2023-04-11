@@ -5,15 +5,19 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~> 3.0.0"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "3.4.3"
+    }
   }
   required_version = ">= 0.14.9"
-    backend "azurerm" {
-        resource_group_name  = "TF-GS"
-        storage_account_name = "terraformcomptestockage"
-        container_name       = "tf-states"
-        key                  = "terraform.tfstate"
-        use_oidc             = true
-    }
+  backend "azurerm" {
+    resource_group_name  = "TF-GS"
+    storage_account_name = "terraformcomptestockage"
+    container_name       = "tf-states"
+    key                  = "terraform.tfstate"
+    use_oidc             = true
+  }
 }
 provider "azurerm" {
   features {}
