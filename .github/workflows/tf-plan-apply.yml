@@ -34,6 +34,7 @@ jobs:
       - name: 'Run Azure CLI commands'
         run: |
           az account show
+          az storage account keys list --resource-group TF-GS --account-name terraformcomptestockage --query '[0].value' -o tsv
           az storage container list --account-name terraformcomptestockage
   terraform-plan:
     name: 'Terraform Plan'
