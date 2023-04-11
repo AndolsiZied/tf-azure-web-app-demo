@@ -41,6 +41,12 @@ jobs:
         with:
           terraform_wrapper: false
 
+      - name: Install az
+        run: |
+          apk add --no-cache python3 py3-pip
+          apk add --no-cache gcc musl-dev python3-dev libffi-dev openssl-dev cargo make
+          pip install azure-cli
+
       # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
       - name: Terraform Init
         run: terraform init
