@@ -10,7 +10,7 @@ terraform {
       version = "3.4.3"
     }
   }
-  required_version = ">= 0.14.9"
+  required_version = ">= 0.14.8"
   backend "azurerm" {
     resource_group_name  = "TF-GS"
     storage_account_name = "terraformcomptestockage"
